@@ -1,10 +1,13 @@
 ---
-layout: home
+layout: default
+title: Home
 ---
 
-{% for post in site.posts %}
-  <article>
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <small>{{ post.date | date: "%B %d, %Y" }}</small>
-  </article>
-{% endfor %}
+<div class="home">
+  {% for post in site.posts %}
+    <article class="post">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+    </article>
+  {% endfor %}
+</div>
