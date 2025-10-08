@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "You Ask of Purpose"
-date: 2025-10-09
+date: 2025-10-08
 ---
 
 # You Ask of Purpose
