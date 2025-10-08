@@ -1,13 +1,12 @@
 ---
 layout: default
-title: Home
+title: About
 ---
 
-<div class="home">
-  {% for post in site.posts %}
-    <article class="post">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-    </article>
-  {% endfor %}
-</div>
+{% for post in site.posts %}
+<p style="margin-bottom: 0;"><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
+
+## [{{ post.title }}]({{ post.url | relative_url }})
+
+---
+{% endfor %}
