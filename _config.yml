@@ -14,10 +14,6 @@ minima:
     - platform: rss
       user_url: "/feed.xml"
 
-# Plugins
-plugins:
-  - jekyll-feed
-
 # Header pages
 header_pages:
   - index.md
