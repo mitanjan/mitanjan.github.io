@@ -8,6 +8,10 @@ baseurl: ""
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 
+# Header pages
+header_pages:
+  - index.md
+
 # Collections
 collections:
   posts:
