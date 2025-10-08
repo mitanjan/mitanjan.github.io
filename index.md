@@ -8,5 +8,4 @@ title: About
 
 ## [{{ post.title }}]({{ post.url | relative_url }})
 
----
 {% endfor %}
