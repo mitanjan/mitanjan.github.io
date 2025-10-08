@@ -8,4 +8,5 @@ layout: default
 ## [{{ post.title }}]({{ post.url | relative_url }})
 
 {% endfor %}
-<p style="margin-top: 2em;"><small>subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></small></p>
+Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a>
+
