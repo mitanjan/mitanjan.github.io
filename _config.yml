@@ -8,6 +8,16 @@ baseurl: ""
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 
+# Minima settings
+minima:
+  social_links:
+    - platform: rss
+      user_url: "/feed.xml"
+
+# Plugins
+plugins:
+  - jekyll-feed
+
 # Header pages
 header_pages:
   - index.md
