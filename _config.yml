@@ -1,0 +1,14 @@
+title: Rooting for truth
+description: Trying to make sense of this world.
+theme: minima
+url: "https://mitanjan.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
