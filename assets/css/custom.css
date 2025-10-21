@@ -1,8 +1,6 @@
-/* Floating Save Gaza Icon */
+/* Floating Save Gaza Icon - Moving Animation */
 .save-gaza-float {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
     z-index: 1000;
     background: linear-gradient(135deg, #00a651, #ce1126);
     color: white;
@@ -12,19 +10,24 @@
     font-size: 14px;
     text-decoration: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
     cursor: pointer;
     border: 2px solid white;
     display: flex;
     align-items: center;
     gap: 8px;
+    white-space: nowrap;
+    
+    /* Start animation */
+    animation: floatAround 20s infinite linear;
 }
 
 .save-gaza-float:hover {
-    transform: translateY(-2px);
+    animation-play-state: paused;
+    transform: scale(1.1);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
     text-decoration: none;
     color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .save-gaza-float:before {
@@ -32,11 +35,58 @@
     font-size: 16px;
 }
 
+/* Floating animation keyframes */
+@keyframes floatAround {
+    0% {
+        top: 20px;
+        left: 20px;
+        transform: rotate(0deg);
+    }
+    12.5% {
+        top: 20px;
+        left: calc(100vw - 200px);
+        transform: rotate(45deg);
+    }
+    25% {
+        top: calc(50vh - 25px);
+        left: calc(100vw - 200px);
+        transform: rotate(90deg);
+    }
+    37.5% {
+        top: calc(100vh - 80px);
+        left: calc(100vw - 200px);
+        transform: rotate(135deg);
+    }
+    50% {
+        top: calc(100vh - 80px);
+        left: 20px;
+        transform: rotate(180deg);
+    }
+    62.5% {
+        top: calc(100vh - 80px);
+        left: calc(50vw - 100px);
+        transform: rotate(225deg);
+    }
+    75% {
+        top: calc(50vh - 25px);
+        left: calc(50vw - 100px);
+        transform: rotate(270deg);
+    }
+    87.5% {
+        top: 20px;
+        left: calc(50vw - 100px);
+        transform: rotate(315deg);
+    }
+    100% {
+        top: 20px;
+        left: 20px;
+        transform: rotate(360deg);
+    }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .save-gaza-float {
-        bottom: 15px;
-        right: 15px;
         padding: 10px 14px;
         font-size: 13px;
     }
@@ -44,8 +94,6 @@
 
 @media (max-width: 480px) {
     .save-gaza-float {
-        bottom: 10px;
-        right: 10px;
         padding: 8px 12px;
         font-size: 12px;
     }
