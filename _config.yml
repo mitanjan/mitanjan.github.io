@@ -22,3 +22,6 @@ header_pages:
 collections:
   posts:
     output: true
+
+# Google analytics
+google_analytics: G-Z80731P7YT
